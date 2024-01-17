@@ -1,2 +1,2 @@
 # Worttrainer-Reloaded
-Der klassische Worttrainer mit aktuallisiertem Code.
+Der klassische Worttrainer mit aktualisiertem Code.
