@@ -9,6 +9,8 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
+    id 'eclipse'
+
 }
 
 repositories {
@@ -25,6 +27,9 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:31.1-jre'
+    
+  	implementation 'com.google.code.gson:gson:2.10.1'
+
 }
 
 tasks.named('test') {
