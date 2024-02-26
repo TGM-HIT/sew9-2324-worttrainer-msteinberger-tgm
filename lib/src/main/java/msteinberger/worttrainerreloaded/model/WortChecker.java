@@ -1,5 +1,10 @@
 package msteinberger.worttrainerreloaded.model;
 
+/**
+ * Die Klasse speichert und überprüft die Wörter des Worttrainers.
+ * @author msteinberger
+ *
+ */
 public class WortChecker {
 	private WortListe wliste;
 	private WortEintrag current;
@@ -20,6 +25,11 @@ public class WortChecker {
 		this.richtig = 0;
 	}
 	
+	/**
+	 * Checkt ob ein Wort richtig geschrieben wurde.
+	 * @param wort Das eingegebene Wort
+	 * @return Ist das Wort richtig
+	 */
 	public boolean checkWort(String wort) {
 		abgefragt++;
 		if(current.getWort().equals(wort)) {
@@ -29,6 +39,11 @@ public class WortChecker {
 		return false;
 	}
 	
+	/**
+	 * Checkt ob ein Wort richtig geschrieben wurde ohne auf Groß/kleinschreibung zu achten.
+	 * @param wort Das eingegebene Wort
+	 * @return Ist das Wort richtig
+	 */
 	public boolean checkWortIgnoreCase(String wort) {
 		abgefragt++;
 		if(current.getWort().toLowerCase().equals(wort.toLowerCase())) {
@@ -38,20 +53,36 @@ public class WortChecker {
 		return false;
 	}
 	
+	/**
+	 * Wählt ein zufälliges Wort.
+	 * @return Das Wort
+	 */
 	public WortEintrag getRandomWort() {
 		current = wliste.getRandomWortEintrag();
 		return current;
 	}
 	
+	/**
+	 * Fügt ein Wort zur Liste hinzu.
+	 * @param wort Das Wort
+	 * @param url Der URL für das Bild
+	 */
 	public void addWortEintrag(String wort, String url) {
 		wliste.add(new WortEintrag(wort, url));
 	}
 	
+	/**
+	 * Gibt die Statistik zum Spiel zurück.
+	 * @return Die Statistik
+	 */
 	public int[] getStatistik() {
 		int[] statistik = {abgefragt, richtig};
 		return statistik;
 	}
 	
+	/**
+	 * Setzt die Statistik zurück.
+	 */
 	public void reset() {
 		abgefragt = 0;
 		richtig = 0;

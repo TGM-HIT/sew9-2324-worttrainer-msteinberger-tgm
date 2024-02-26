@@ -3,6 +3,11 @@ package msteinberger.worttrainerreloaded.view;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/**
+ * Der Frame der GUI von dem Worttrainer.
+ * @author msteinberger
+ *
+ */
 public class WortFrame extends JFrame {
 	public WortFrame(JPanel layout) {
 		super("WortTrainer");

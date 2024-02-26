@@ -9,6 +9,11 @@ import java.net.URL;
 import javax.swing.*;
 import msteinberger.worttrainerreloaded.control.WortController;
 
+/**
+ * Das Panel der UI.
+ * @author msteinberger
+ *
+ */
 public class WortPanel extends JPanel {
 	private JTextField eingabe;
 	private JLabel richtig, falsch, anzahl, bild;
@@ -51,6 +56,10 @@ public class WortPanel extends JPanel {
 		this.add(bottom, BorderLayout.PAGE_END);
 	}
 	
+	/**
+	 * Setzt ein neues Bild.
+	 * @param url Der Link zum Bild
+	 */
 	public void updateImage(String url) {
 		try {
 			Image image = new ImageIcon(new URL(url)).getImage();
@@ -63,12 +72,21 @@ public class WortPanel extends JPanel {
 		}
 	}
 	
+	/**
+	 * Gibt die Eingabe zurück.
+	 * @return Die Eingabe
+	 */
 	public String getEingabe() {
 		String text = eingabe.getText();
 		eingabe.setText(null);
 		return text;
 	}
 	
+	/**
+	 * Aktuallisiert die Statistik.
+	 * @param beantwortet Wörter ingesammt
+	 * @param korrekt Richtige Wörter
+	 */
 	public void updateScore(int beantwortet, int korrekt) {
 		richtig.setText(String.valueOf(korrekt));
 		anzahl.setText(String.valueOf(beantwortet));

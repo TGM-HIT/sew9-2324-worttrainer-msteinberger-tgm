@@ -10,6 +10,11 @@ import javax.swing.JTextField;
 
 import msteinberger.worttrainerreloaded.control.WortController;
 
+/**
+ * Dieses Pannel kann neue Wörter zum Worttrainer hinzufügen.
+ * @author msteinberger
+ *
+ */
 public class AddWortPanel extends JPanel {
 	private JTextField wort, url;
 	private JButton add, close;
@@ -37,6 +42,10 @@ public class AddWortPanel extends JPanel {
 		this.add(panel1);
 	}
 	
+	/**
+	 * Gibt die Eingabe zurück. 
+	 * @return Die Eingabe
+	 */
 	public String[] getEingabe() {
 		String[] eingabe = {wort.getText(), url.getText()};
 		wort.setText(null);

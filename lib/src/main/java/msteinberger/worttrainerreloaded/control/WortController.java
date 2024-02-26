@@ -8,6 +8,11 @@ import java.awt.event.WindowEvent;
 import msteinberger.worttrainerreloaded.model.*;
 import msteinberger.worttrainerreloaded.view.*;
 
+/**
+ * Die Controller Class des Worttrainers.
+ * @author msteinberger
+ *
+ */
 public class WortController implements ActionListener {
 	private WortPanel wPanel;
 	private WortFrame wFrame;
